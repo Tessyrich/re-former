@@ -1,0 +1,25 @@
+<!-- app/views/users/new.html.erb -->
+<h1>Sign Up</h1>
+
+<%= form_with model: @user, local: false do |form| %>
+    <div>
+      <%= form.label :username, "Your user name here" %>
+      <%= form.text_field :username, value: "startername" %>
+    </div>
+  
+    <div>
+      <%= form.label :email %>
+      <%= form.email_field :email, placeholder: "example@example.com" %>
+    </div>
+  
+    <div>
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
+  
+    <div>
+      <%= form.submit "Create User" %>
+    </div>
+  <% end %>
+  
+
